@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xls2json</title>
+</head>
+<body>
+  <h1>upload and merge your xls data into a single json</h1>
+  <form action="" method="POST" enctype="multipart/form-data">
+      <div>
+          <label for="upload_files"><h2>choose one or multiple 'investor-weekly-carloads-*month*-*year*.xlsx' files</h2></label>
+          <input multiple type="file" name="files"  id="upload_files" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
+      </div>
+      <input disabled id="upload_btn" class="btn" type="submit" name="action" value="Upload">
+  </form>
+  <script type="text/javascript" src="{{ url_for('static', filename='submit_enabler.js') }}"></script>
+</body>
+</html>
